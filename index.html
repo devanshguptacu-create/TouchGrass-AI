@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#10251b">
+  <title>TouchGrass AI | Go Beyond the Screen</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="#" class="logo">🌿 TouchGrass<span>AI</span></a>
+    <div class="status"><span class="dot"></span> Nature mode</div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <p class="eyebrow">YOUR PERSONAL NATURE COMPANION</p>
+      <h1>Less scrolling.<br><span>More living.</span></h1>
+      <p class="hero-text">
+        Your next adventure is outside. Tell us how you feel,
+        and let AI find a reason to step into the real world.
+      </p>
+      <a href="#planner" class="primary-btn">Find my adventure ↗</a>
+      <div class="hero-stats">
+        <div><strong id="completedCount">0</strong><span>Missions completed</span></div>
+        <div><strong id="minutesCount">0</strong><span>Minutes outdoors</span></div>
+        <div><strong>AI</strong><span>Nature companion</span></div>
+      </div>
+    </section>
+
+    <section class="planner panel" id="planner">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">01 / YOUR CURRENT VIBE</p>
+          <h2>What do you need today?</h2>
+        </div>
+        <span class="leaf-icon">✳</span>
+      </div>
+
+      <label for="mood">How are you feeling?</label>
+      <select id="mood">
+        <option value="stressed">Stressed — I need a break</option>
+        <option value="energetic">Energetic — let's move</option>
+        <option value="curious">Curious — I want to explore</option>
+        <option value="peaceful">Peaceful — keep it calm</option>
+        <option value="bored">Bored — surprise me</option>
+      </select>
+
+      <div class="form-row">
+        <div>
+          <label for="duration">Available time</label>
+          <select id="duration">
+            <option value="5">5 minutes</option>
+            <option value="15" selected>15 minutes</option>
+            <option value="30">30 minutes</option>
+            <option value="60">1 hour</option>
+          </select>
+        </div>
+        <div>
+          <label for="interest">Your interest</label>
+          <select id="interest">
+            <option value="nature">Nature & greenery</option>
+            <option value="walking">Walking & movement</option>
+            <option value="photography">Photography</option>
+            <option value="birds">Birdwatching</option>
+            <option value="gardening">Gardening</option>
+          </select>
+        </div>
+      </div>
+
+      <button class="primary-btn full-btn" id="generateBtn">
+        ✨ Generate my mission
+      </button>
+      <p class="small-note" id="aiStatus">
+        AI loads on demand. Your selections stay in this browser.
+      </p>
+    </section>
+
+    <section class="mission-section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">02 / YOUR NEXT ADVENTURE</p>
+          <h2>Get out there.</h2>
+        </div>
+        <span class="mission-count" id="missionCount">0 active</span>
+      </div>
+      <div id="missionContainer" class="mission-grid">
+        <div class="empty-state">
+          <span>🌱</span>
+          <h3>Your adventure starts here</h3>
+          <p>Generate a mission and make today a little more interesting.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="impact panel">
+      <span class="impact-icon">🌎</span>
+      <div>
+        <p class="eyebrow">THE OPEN AI DIFFERENCE</p>
+        <h2>AI that gets you offline.</h2>
+        <p>
+          Use an open-weight model in your browser instead of relying
+          on a paid AI API. Once the model is cached, supported devices
+          can run inference locally.
+        </p>
+      </div>
+    </section>
+
+    <footer>
+      <p>Made for the real world 🌿</p>
+      <p>TouchGrass AI · Explore more, scroll less.</p>
+    </footer>
+  </main>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
